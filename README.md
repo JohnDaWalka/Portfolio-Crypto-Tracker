@@ -67,9 +67,10 @@ Open your terminal or command prompt and navigate to where you want to store thi
 ```bash
 git clone https://github.com/JohnDaWalka/crypto-portfolio-tracker.git
 cd crypto-portfolio-tracker
+git checkout master
 ```
 
-This command first downloads the project from GitHub, then navigates into the project folder.
+This command first downloads the project from GitHub, navigates into the project folder, and checks out the master branch (the base branch for this repository).
 
 **Step 2: Install Dependencies**
 
@@ -699,15 +700,19 @@ This section explains how developers can contribute to the project.
 
 We welcome contributions from developers of all skill levels. Whether you're fixing bugs, adding features, or improving documentation, your help makes this project better.
 
+**Note**: This repository uses `master` as its base branch. All pull requests should target the `master` branch, and feature branches should be created from `master`.
+
 ### Contribution Process
 
 If you want to contribute, follow this step-by-step process.
 
 **Step 1: Fork the Repository**: Click the "Fork" button on GitHub to create your own copy of the project.
 
-**Step 2: Create a Feature Branch**: In your local repository, create a new branch for your changes. Use a descriptive name like `feature/add-email-alerts` or `bugfix/fix-price-calculation`.
+**Step 2: Create a Feature Branch**: In your local repository, create a new branch from the `master` branch for your changes. Use a descriptive name like `feature/add-email-alerts` or `bugfix/fix-price-calculation`.
 
 ```bash
+git checkout master
+git pull origin master
 git checkout -b feature/your-feature-name
 ```
 
@@ -725,7 +730,7 @@ git commit -m "Add feature description: what this change accomplishes"
 git push origin feature/your-feature-name
 ```
 
-**Step 6: Create a Pull Request**: Go to the original repository on GitHub and create a Pull Request from your branch. Describe your changes and why they're valuable.
+**Step 6: Create a Pull Request**: Go to the original repository on GitHub and create a Pull Request from your branch to the `master` branch. Describe your changes and why they're valuable.
 
 ### Code Style Guidelines
 
