@@ -705,10 +705,10 @@ If you want to contribute, follow this step-by-step process.
 
 **Step 1: Fork the Repository**: Click the "Fork" button on GitHub to create your own copy of the project.
 
-**Step 2: Create a Feature Branch**: In your local repository, create a new branch for your changes. Use a descriptive name like `feature/add-email-alerts` or `bugfix/fix-price-calculation`.
+**Step 2: Create a Feature Branch**: In your local repository, create a new branch from master for your changes. Use a descriptive name like `feature/add-email-alerts` or `bugfix/fix-price-calculation`.
 
 ```bash
-git checkout -b feature/your-feature-name
+git checkout -b feature/your-feature-name master
 ```
 
 **Step 3: Make Your Changes**: Write your code, add tests, and update documentation as needed.
