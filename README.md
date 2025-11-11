@@ -712,7 +712,7 @@ If you want to contribute, follow this step-by-step process.
 
 ```bash
 git checkout master
-git pull origin master
+git pull --ff-only origin master
 git checkout -b feature/your-feature-name
 ```
 
