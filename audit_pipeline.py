@@ -30,7 +30,8 @@ class AuditLevel(Enum):
 # API endpoints for live crypto data
 COINGECKO_API = "https://api.coingecko.com/api/v3"
 ETHERSCAN_API = "https://api.etherscan.io/api"
-SAG3_API = "https://api.sag3.ai"  # Placeholder - use actual endpoint
+# Note: SAG3_API reserved for future Sag3.AI integration
+SAG3_API = "https://api.sag3.ai"  # Placeholder - use actual endpoint when available
 
 
 # Tool paths and versions
@@ -395,6 +396,10 @@ def main():
         print(json.dumps(report, indent=2))
     
     # Exit code based on results
+    if not pipeline.results:
+        Logger.error("No audit tools were run. Install at least one audit tool.")
+        sys.exit(1)
+    
     passed = all(r.passed for r in pipeline.results)
     sys.exit(0 if passed else 1)
 
