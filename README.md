@@ -37,6 +37,8 @@ These are organized by category to help users understand what each feature does 
 
 **Zero-Cost Data Sources**: The application uses only free APIs, meaning you never pay subscription fees for live data. This makes it sustainable for long-term use.
 
+**Smart Contract Audit Pipeline**: Comprehensive security audit tool for Solidity smart contracts with real-time Etherscan integration. Supports multiple audit levels and fetches on-chain metrics like transaction count, verification status, and deployer information. See [AUDIT_PIPELINE.md](AUDIT_PIPELINE.md) for details.
+
 <!-- 
 ===========================================
 SECTION 2: INSTALLATION & SETUP
@@ -687,6 +689,10 @@ If you've tried the above and still need help, contact us through these channels
 **Node.js Documentation**: https://nodejs.org/en/docs - Official Node.js reference
 
 **Git Documentation**: https://git-scm.com/doc - Learn how to use version control
+
+**Smart Contract Audit Pipeline**: See [AUDIT_PIPELINE.md](AUDIT_PIPELINE.md) - Comprehensive guide for the audit pipeline
+
+**Etherscan API Documentation**: https://docs.etherscan.io/ - Reference for on-chain data API
 
 <!-- 
 ===========================================
