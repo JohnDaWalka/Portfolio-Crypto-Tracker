@@ -1,4 +1,4 @@
-# Portfolio-Crypto-Tracker# Crypto Portfolio Tracker
+# Crypto Portfolio Tracker
 
 <!-- 
 This is a professional-grade cryptocurrency portfolio tracking application built with React. 
@@ -65,8 +65,8 @@ The following instructions will get the project running on your local machine fo
 Open your terminal or command prompt and navigate to where you want to store this project. Then run the following command to download the entire project to your computer.
 
 ```bash
-git clone https://github.com/JohnDaWalka/crypto-portfolio-tracker.git
-cd crypto-portfolio-tracker
+git clone https://github.com/JohnDaWalka/Portfolio-Crypto-Tracker.git
+cd Portfolio-Crypto-Tracker
 git checkout master
 ```
 
@@ -115,7 +115,7 @@ Understanding the structure helps developers navigate the codebase and know wher
 The project is organized into several folders, each serving a specific purpose. Understanding this structure helps you find files quickly and know where to add new code.
 
 ```
-crypto-portfolio-tracker/
+Portfolio-Crypto-Tracker/
 ├── src/
 │   ├── components/
 │   │   ├── PortfolioTracker.jsx       
@@ -528,7 +528,7 @@ Vercel is a platform optimized for deploying modern web applications. They offer
 
 **Prerequisites**: You need a GitHub account and a Vercel account (both free).
 
-**Deployment Steps**: First, push your project to GitHub using Git. Then go to vercel.com and log in. Click "New Project" and select your crypto-portfolio-tracker repository. Vercel automatically detects that it's a React project and configures everything. Click "Deploy" and your application goes live on the internet.
+**Deployment Steps**: First, push your project to GitHub using Git. Then go to vercel.com and log in. Click "New Project" and select your Portfolio-Crypto-Tracker repository. Vercel automatically detects that it's a React project and configures everything. Click "Deploy" and your application goes live on the internet.
 
 ```bash
 npm install -g vercel
