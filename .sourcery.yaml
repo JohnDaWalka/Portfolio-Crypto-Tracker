@@ -1,0 +1,200 @@
+# Sourcery AI Configuration for Portfolio Crypto Tracker
+# This file configures Sourcery's Python code analysis and refactoring suggestions
+
+# Files and directories to ignore
+ignore:
+  - .git
+  - venv
+  - .venv
+  - env
+  - .env
+  - .tox
+  - node_modules
+  - vendor
+  - setup.py
+  - build/
+  - dist/
+  - '*.egg-info'
+  - __pycache__
+  - .pytest_cache
+  - .mypy_cache
+  - htmlcov/
+  - .coverage
+  - test_contracts/
+  - tmp/
+
+# Rule settings for code analysis
+rule_settings:
+  # Enable default Sourcery rules
+  enable:
+    - default
+  
+  # Disable specific rules if needed
+  disable:
+    # Uncomment to disable specific rules:
+    # - for-append-to-extend
+    # - raise-from-previous-error
+  
+  # Types of suggestions to provide
+  rule_types:
+    - refactoring      # Code structure improvements
+    - suggestion       # Best practice recommendations
+    - comment          # Code documentation suggestions
+  
+  # Target Python version (align with project requirements)
+  python_version: '3.7'
+
+# Custom rules (add project-specific rules here)
+rules: []
+
+# Code quality metrics configuration
+metrics:
+  # Minimum quality threshold (0-100)
+  # Code below this score will trigger suggestions
+  quality_threshold: 25.0
+
+# GitHub integration settings
+github:
+  # Labels to add to Sourcery PRs
+  labels:
+    - code-quality
+    - automated
+  
+  # Labels that prevent Sourcery from reviewing
+  ignore_labels:
+    - sourcery-ignore
+    - work-in-progress
+    - wip
+  
+  # Who should review Sourcery's suggestions
+  request_review: author
+  
+  # Branch naming pattern for Sourcery PRs
+  sourcery_branch: sourcery/{base_branch}
+
+# Code clone/duplication detection
+clone_detection:
+  # Minimum number of lines to consider as a clone
+  min_lines: 3
+  
+  # Minimum number of times code must appear to be flagged
+  min_duplicates: 2
+  
+  # Whether to only flag identical clones (true) or similar ones too (false)
+  identical_clones_only: false
+
+# Proxy settings (if behind corporate firewall)
+proxy:
+  # Set to true to bypass SSL verification (use with caution)
+  no_ssl_verify: false
+  # url: http://proxy.example.com:8080  # Uncomment and set if needed
+
+# Python-specific settings
+python:
+  # Prefer specific code patterns
+  prefer:
+    - f-strings         # Use f-strings over .format() or %
+    - comprehensions    # Use list/dict comprehensions when appropriate
+    - context-managers  # Use 'with' statements for resource management
+  
+  # Code style preferences
+  style:
+    # Maximum line length (match PEP 8 or project standard)
+    max_line_length: 100
+    
+    # Prefer specific imports style
+    import_style: 'explicit'  # vs 'wildcard'
+
+# Refactoring preferences specific to this project
+refactoring:
+  # Prefer these patterns for this codebase
+  patterns:
+    - Use dataclasses for structured data
+    - Use type hints for better code clarity
+    - Prefer requests library for HTTP calls
+    - Use subprocess for external tool execution
+    - Handle exceptions with specific error types
+    - Use Logger class for consistent logging
+    - Validate inputs before processing
+    - Set timeouts for external operations
+  
+  # Code smell detection thresholds
+  complexity:
+    # Maximum cyclomatic complexity before suggesting refactoring
+    max_function_complexity: 10
+    
+    # Maximum number of function parameters
+    max_parameters: 5
+    
+    # Maximum number of lines in a function
+    max_function_length: 50
+    
+    # Maximum nesting depth
+    max_nesting_depth: 4
+
+# Documentation requirements
+documentation:
+  # Require docstrings for these
+  require_docstrings_for:
+    - public_functions
+    - public_classes
+    - public_methods
+  
+  # Docstring style (google, numpy, sphinx, or auto)
+  style: google
+
+# Testing preferences
+testing:
+  # Test file patterns
+  test_patterns:
+    - 'test_*.py'
+    - '*_test.py'
+    - 'tests/**/*.py'
+  
+  # Test framework hints
+  framework: pytest  # or unittest
+
+# Performance optimization suggestions
+performance:
+  # Flag performance issues
+  suggest_optimizations: true
+  
+  # Areas to focus on
+  focus:
+    - api_calls       # Optimize API call patterns
+    - file_io         # Optimize file operations
+    - loops           # Optimize loop structures
+    - comprehensions  # Suggest comprehensions over loops
+
+# Security scanning
+security:
+  # Scan for security issues
+  enabled: true
+  
+  # Security checks to perform
+  checks:
+    - no_hardcoded_secrets  # Flag potential hardcoded secrets
+    - no_sql_injection      # Flag potential SQL injection
+    - secure_random         # Suggest secure random functions
+    - safe_yaml             # Suggest safe YAML loading
+    - input_validation      # Suggest input validation
+
+# Project-specific notes for Sourcery
+# These help Sourcery understand the project context
+notes: |
+  This is a cryptocurrency portfolio tracker with smart contract audit capabilities.
+  
+  Key considerations:
+  - Security is critical - never suggest changes that could expose sensitive data
+  - API calls should always have timeouts and error handling
+  - Backward compatibility is important for the audit pipeline API
+  - Logging should use the Logger class consistently
+  - Environment variables should have sensible defaults
+  - All external tool calls should be validated and sanitized
+  
+  When suggesting refactorings:
+  - Maintain the existing API structure for audit_pipeline.py
+  - Keep error handling patterns consistent
+  - Preserve the Logger class usage pattern
+  - Don't break command-line interface compatibility
+  - Consider that some functions may be called by external scripts

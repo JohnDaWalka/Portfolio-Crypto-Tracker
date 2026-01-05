@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/JohnDaWalka/Portfolio-Crypto-Tracker/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 📖 Documentation
+    url: https://github.com/JohnDaWalka/Portfolio-Crypto-Tracker/blob/main/README.md
+    about: Read the project documentation
+  - name: 🔒 Security Policy
+    url: https://github.com/JohnDaWalka/Portfolio-Crypto-Tracker/security/policy
+    about: Report security vulnerabilities responsibly
