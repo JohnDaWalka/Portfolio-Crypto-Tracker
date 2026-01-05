@@ -671,11 +671,7 @@ Before reaching out for support, try these resources which often solve problems 
 
 If you've tried the above and still need help, contact us through these channels.
 
-**Create a GitHub Issue**: Go to the Issues tab on the GitHub repository and describe your problem in detail. Include any error messages, what you were doing when the error occurred, and what you've already tried to fix it.
-
-**Email Support**: Contact us at support@cryptotracker.dev with a detailed description of your issue. Include screenshots if helpful.
-
-**Discord Community**: Join our Discord server to chat with other users and developers. This is often the fastest way to get help from the community.
+**Create a GitHub Issue**: Go to the Issues tab on the GitHub repository and describe your problem in detail. Include any error messages, what you were doing when the error occurred, and what you've already tried to fix it. This is the primary support channel for this project.
 
 ### Additional Learning Resources
 
