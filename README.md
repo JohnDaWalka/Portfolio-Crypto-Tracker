@@ -112,14 +112,14 @@ If you're a crypto coach using this tracker to help clients:
 You can export your portfolio information for analysis, record-keeping, or sharing with clients. Different export formats serve different purposes.
 
 ```bash
+# Exports data as a comma-separated values file that opens in Excel or Google Sheets
 npm run export:csv
-<!-- Exports data as a comma-separated values file that opens in Excel or Google Sheets -->
 
+# Exports data as JSON, useful for programmatic processing
 npm run export:json
-<!-- Exports data as JSON, useful for programmatic processing -->
 
+# Creates a formatted PDF report of your portfolio (premium feature)
 npm run export:pdf
-<!-- Creates a formatted PDF report of your portfolio (premium feature) -->
 ```
 
 ### Code Examples for Developers
@@ -307,29 +307,29 @@ SECTION 6: DEVELOPMENT WORKFLOW
 The `package.json` file defines several scripts that help with development. Run these commands in your terminal from the project directory.
 
 ```bash
+# Starts the development server with hot reloading
+# Changes you make are instantly visible in your browser
 npm run dev
-<!-- Starts the development server with hot reloading -->
-<!-- Changes you make are instantly visible in your browser -->
 
+# Creates an optimized production build
+# This creates a dist/ folder with minified files
 npm run build
-<!-- Creates an optimized production build -->
-<!-- This creates a dist/ folder with minified files -->
 
+# Shows what the production build looks like
+# Useful for testing before deploying
 npm run preview
-<!-- Shows what the production build looks like -->
-<!-- Useful for testing before deploying -->
 
+# Checks code for style issues and common mistakes
+# Helps maintain consistent code quality
 npm run lint
-<!-- Checks code for style issues and common mistakes -->
-<!-- Helps maintain consistent code quality -->
 
+# Automatically fixes code formatting
+# Makes all code follow the same style
 npm run format
-<!-- Automatically fixes code formatting -->
-<!-- Makes all code follow the same style -->
 
+# Runs automated tests to catch bugs
+# Tests verify that functions work as expected
 npm test
-<!-- Runs automated tests to catch bugs -->
-<!-- Tests verify that functions work as expected -->
 ```
 
 ### Adding a New Cryptocurrency to Track
