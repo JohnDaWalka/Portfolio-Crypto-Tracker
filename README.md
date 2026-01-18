@@ -696,7 +696,119 @@ If you've tried the above and still need help, contact us through these channels
 
 <!-- 
 ===========================================
-SECTION 13: CONTRIBUTION GUIDELINES
+SECTION 13: AI-ASSISTED DEVELOPMENT
+===========================================
+This section explains the AI tools configured for this repository.
+-->
+
+## AI-Assisted Development
+
+This repository is configured to work seamlessly with GitHub Copilot and Sourcery-AI to enhance developer productivity and code quality.
+
+### GitHub Copilot Setup
+
+**What is GitHub Copilot?** GitHub Copilot is an AI-powered code assistant that helps you write code faster and with fewer errors. It can complete entire lines or blocks of code, suggest solutions to problems, and even help write tests.
+
+**Repository Configuration**: This repository includes custom instructions in `.github/copilot-instructions.md` that guide GitHub Copilot on:
+- Project structure and technology stack
+- Coding standards and conventions
+- Security requirements and best practices
+- Build, test, and deployment commands
+- Common patterns used in this codebase
+
+**Getting Started with Copilot**:
+1. Install the GitHub Copilot extension in your IDE (VS Code, JetBrains, etc.)
+2. Sign up for GitHub Copilot (free for students, open source maintainers)
+3. Open any file and start coding - Copilot will suggest completions automatically
+4. The custom instructions ensure Copilot understands this project's specific needs
+
+**Copilot Agent for GitHub Issues**: You can also use GitHub Copilot as an autonomous coding agent:
+- Assign issues with the label `copilot` to have Copilot work on them
+- Copilot will create a branch, make changes, and submit a pull request
+- All changes are reviewed by humans before merging
+- The agent follows the guidelines in `.github/copilot-instructions.md`
+
+### Sourcery-AI Setup
+
+**What is Sourcery-AI?** Sourcery is an AI-powered code review and refactoring tool specifically for Python. It automatically suggests improvements to make your code cleaner, more efficient, and more Pythonic.
+
+**Repository Configuration**: This repository includes a `.sourcery.yaml` configuration file that:
+- Defines code quality standards and thresholds
+- Specifies which files and directories to analyze
+- Configures refactoring preferences
+- Sets up code duplication detection
+- Enables security scanning for common vulnerabilities
+
+**Getting Started with Sourcery**:
+1. Install Sourcery: `pip install sourcery`
+2. Install the Sourcery extension in VS Code or PyCharm (optional)
+3. Sourcery will automatically analyze Python files as you work
+4. Review and apply Sourcery's suggestions to improve code quality
+
+**Using Sourcery from the Command Line**:
+```bash
+# Analyze a file
+sourcery review audit_pipeline.py
+
+# Automatically apply safe refactorings
+sourcery refactor audit_pipeline.py --in-place
+
+# Check code quality score
+sourcery login  # One-time setup
+sourcery review .
+```
+
+**Sourcery with Pre-commit Hooks**: You can integrate Sourcery into your git workflow:
+```yaml
+# Add to .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/sourcery-ai/sourcery
+    rev: v1.0.0
+    hooks:
+      - id: sourcery
+        args: [--check]
+```
+
+### AI Tool Benefits
+
+**For Individual Developers**:
+- Faster code writing with intelligent completions
+- Automatic code quality improvements
+- Real-time security vulnerability detection
+- Learning best practices through AI suggestions
+- Consistent code style across the project
+
+**For Teams**:
+- Standardized coding patterns
+- Reduced code review time
+- Fewer bugs in production
+- Better documentation through AI-assisted comments
+- Knowledge sharing through consistent practices
+
+### Best Practices
+
+**When Using AI Tools**:
+- Review all AI suggestions before accepting them
+- Ensure changes align with project goals
+- Test thoroughly after applying AI refactorings
+- Use AI as an assistant, not a replacement for thinking
+- Report issues or incorrect suggestions to improve the tools
+
+**Configuration Updates**: As the project evolves, update:
+- `.github/copilot-instructions.md` for new patterns or requirements
+- `.sourcery.yaml` for new Python code quality standards
+- Issue templates to help AI understand task requirements better
+
+### Learn More
+
+- **GitHub Copilot Documentation**: https://docs.github.com/en/copilot
+- **Copilot Best Practices**: https://docs.github.com/en/copilot/tutorials/coding-agent/get-the-best-results
+- **Sourcery Documentation**: https://docs.sourcery.ai/
+- **Sourcery Rules**: https://docs.sourcery.ai/refactorings/
+
+<!-- 
+===========================================
+SECTION 14: CONTRIBUTION GUIDELINES
 ===========================================
 This section explains how developers can contribute to the project.
 -->
@@ -765,7 +877,7 @@ We're always looking for these kinds of contributions.
 
 <!-- 
 ===========================================
-SECTION 14: LICENSE & LEGAL
+SECTION 15: LICENSE & LEGAL
 ===========================================
 This section covers the legal aspects of the project.
 -->
