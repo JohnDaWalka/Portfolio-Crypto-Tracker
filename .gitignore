@@ -43,3 +43,10 @@ Thumbs.db
 
 # Test contracts
 test_contracts/
+
+# PQC Security - NEVER commit private keys!
+*.key
+!*.pub.json
+security/config.yaml
+!security/config.template.yaml
+!security/*.pqc
